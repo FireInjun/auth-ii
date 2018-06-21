@@ -4,7 +4,6 @@ const User = require( '../models/index' );
 const secret = 'Cwk6sjAYd7qxrgGLFamWfNK8Q4HMn3Bzc5JUeTpXDubEv9Py2Zt8SngvD9G6yk3hMadK4fxZFBREqY7zAceCPpjrQLW5bwTVu2Hs'
 
 router
-  .route('/register')
   .post( '/register', function ( req, res )
 {
   User.create( req.body )
@@ -17,7 +16,6 @@ router
 
 
 router
-  .route('/login')
   .post( '/login', ( req, res ) =>
   {
     const { username, password } = req.body;
